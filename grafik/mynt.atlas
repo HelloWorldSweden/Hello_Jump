@@ -1,0 +1,58 @@
+animations {
+  id: "mynt"
+  images {
+    image: "/grafik/animationer/mynt/mynt a (1).png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt b.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt c.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt d.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt e.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt f.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt g.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt h.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt i.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt j.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt k.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt l.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt m.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt n.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt o.png"
+  }
+  images {
+    image: "/grafik/animationer/mynt/mynt p (16).png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 16
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

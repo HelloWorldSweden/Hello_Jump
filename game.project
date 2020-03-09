@@ -1,0 +1,10 @@
+[project]
+title = Hello Jump!
+
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[display]
+width = 500
+height = 800
+

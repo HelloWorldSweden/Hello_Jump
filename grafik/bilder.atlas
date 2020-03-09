@@ -1,0 +1,15 @@
+images {
+  image: "/grafik/bilder/platform.png"
+}
+images {
+  image: "/grafik/bilder/spelare.png"
+}
+images {
+  image: "/grafik/bilder/monster.png"
+}
+images {
+  image: "/grafik/bilder/studsare.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
