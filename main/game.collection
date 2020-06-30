@@ -1,7 +1,7 @@
 name: "spelet"
 instances {
   id: "player"
-  prototype: "/objekt/player.go"
+  prototype: "/object/player.go"
   position {
     x: 0.0
     y: 0.0
