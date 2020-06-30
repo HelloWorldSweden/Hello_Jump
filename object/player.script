@@ -6,6 +6,8 @@ local gravity = 15
 local jump = 550
 local movement = 50
 
+local fall_time = 0
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	
@@ -15,7 +17,6 @@ function init(self)
 end
 
 function update(self, dt)
-
 	-- Friction --
 	x_speed = vmath.lerp(0.1, x_speed, 0)
 	x_speed = x_speed + vmath.length(direction)*movement
@@ -39,6 +40,15 @@ function update(self, dt)
 	world.y = world.y - (y_speed * dt)
 	go.set_position(world, 'world')
 	y_speed = y_speed - gravity
+
+	-- Detect Death -- 	todo GameOver Screen - Meetup 4
+	fall_time = fall_time + dt
+	if fall_time > 3 then
+		print("Oh Bummer!")
+	end
+	if y_speed > 0 then
+		fall_time = 0
+	end
 end
 
 function on_message(self, message_id, message, sender)
