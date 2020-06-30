@@ -13,6 +13,7 @@ components {
     w: 1.0
   }
 }
+
 embedded_components {
   id: "sprite"
   type: "sprite"
