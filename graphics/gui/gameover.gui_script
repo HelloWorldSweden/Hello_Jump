@@ -1,0 +1,13 @@
+function init(self)
+	msg.post('.', 'acquire_input_focus')
+end
+
+function on_input(self, action_id, action)
+	button = gui.get_node('play_again')
+
+	if gui.pick_node(button, action.x, action.y) then
+		if action_id == hash('click') and action.released then
+			msg.post('main:/loader', 'load_world', {to = "#game"})
+		end
+	end
+end

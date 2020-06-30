@@ -1,4 +1,4 @@
-name: "spelet"
+name: "game"
 instances {
   id: "player"
   prototype: "/object/player.go"

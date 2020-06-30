@@ -2,8 +2,8 @@
 -- Den next_world världen som ska laddas.
 local next_world = nil
 
--- Den world världen.
-local world = nil
+-- Den nuvarande världen.
+local current_world = nil
 
 function init(self)
 
@@ -32,14 +32,14 @@ function on_message(self, message_id, message, sender)
 		msg.post(sender, 'enable')
 
 		-- Den world världen är nu den som förut var next_world värld.
-		world = next_world
+		current_world = next_world
 
 		-- Just nu har vi ingen next_world värld.
 		next_world = nil
 	elseif message_id == hash('proxy_unloaded') then
 
-		-- Om en värld har laddats ur, har vi ingen world värld.
-		world = nil
+		-- Om en värld har laddats ur, har vi ingen nuvarande värld.
+		current_world = nil
 
 		-- Om en next_world värld är satt, laddar vi in den.
 		if next_world then
@@ -48,13 +48,13 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash('load_world') then
 
 		-- Om vi får ett meddelande att ladda en värld,
-		-- sätter vi next_world till message.till.
+		-- sätter vi next_world till message.to.
 		next_world = message.to
 
 		-- Om vi har en world värld, måste vi först ladda ur
 		-- den world världen.
-		if world then
-			msg.post(world, 'unload')
+		if current_world then
+			msg.post(current_world, 'unload')
 		else
 			-- Annars kan vi bara ladda in next_world värld.
 			msg.post(next_world, 'load')

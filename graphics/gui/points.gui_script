@@ -1,18 +1,11 @@
 local points = 0
 
 function on_message(self, message_id, message, sender)
-
 	if message_id == hash('y_position') then
-
 		if message.points > points then
-
 			points = math.floor(message.points)
-
 			points_node = gui.get_node('points')
-
 			gui.set_text(points_node, points)
-
 		end
 	end
-
 end

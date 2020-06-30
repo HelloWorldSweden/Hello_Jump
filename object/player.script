@@ -41,10 +41,10 @@ function update(self, dt)
 	go.set_position(world, 'world')
 	y_speed = y_speed - gravity
 
-	-- Detect Death -- 	todo GameOver Screen - Meetup 4
+	-- Detect Death --
 	fall_time = fall_time + dt
 	if fall_time > 3 then
-		print("Oh Bummer!")
+		msg.post('main:/loader', 'load_world', {to = '#gameover'}) --Detta är inbytt
 	end
 	if y_speed > 0 then
 		fall_time = 0
