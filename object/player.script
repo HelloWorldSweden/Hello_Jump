@@ -44,7 +44,7 @@ function update(self, dt)
 	-- Detect Death --
 	fall_time = fall_time + dt
 	if fall_time > 3 then
-		msg.post('main:/loader', 'load_world', {to = '#gameover'}) --Detta är inbytt
+		msg.post('main:/loader', 'load_world', {to = '#gameover'})
 	end
 	if y_speed > 0 then
 		fall_time = 0
@@ -56,7 +56,13 @@ function on_message(self, message_id, message, sender)
 		if message.other_group == hash('platform') then
 			if y_speed < 0 then
 				y_speed = jump
+				msg.post('#jump_sfx', 'play_sound')
 			end
+		end
+		elseif message.other_group == hash('bouncer') then
+			if y_speed < 0 then
+				y_speed = jump * 3
+				msg.post('#jump_sfx', 'play_sound')
 		end
 	end
 end
