@@ -1,7 +1,7 @@
 # Hello Jump
 
 ## Spelstudio by King Fortsättning
-Normally only the Complete Game and Defold 1 (starter project) is required for meetups.
+Normally only the **Complete Game** and **Defold 1** (starter project) is required for meetups.
 
 | Meetup | Branch | Download |
 | --- | --- | ---
