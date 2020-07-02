@@ -10,5 +10,7 @@ Normally only the **Complete Game** and **Defold 1** (starter project) is requir
 | Defold 2 | `defold2` | [`defold2.zip`](https://github.com/HelloWorldSweden/Hello_Jump/archive/defold2.zip)
 | Defold 3 | `defold3` | [`defold3.zip`](https://github.com/HelloWorldSweden/Hello_Jump/archive/defold3.zip)
 | Defold 4 | `defold4` | [`defold4.zip`](https://github.com/HelloWorldSweden/Hello_Jump/archive/defold4.zip)
+| Defold 5 (Eget Platform Projekt) | `eget_projekt_platformer` | [`eget_projekt_platformer.zip`](https://github.com/HelloWorldSweden/Hello_Jump/archive/eget_projekt_platformer.zip)
+
 
 
