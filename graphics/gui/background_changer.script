@@ -1,0 +1,20 @@
+local sky = vmath.vector4(0.52, 0.8, 0.9, 1)	-- Vår blåa färg
+local space = vmath.vector4(0.1, 0.1, 0.1, 1)   -- Nästan helt svart färg
+local space_height = 10000						
+local height = 0
+local t = 0
+
+function init(self)
+	msg.post('@render:', 'clear_color', {color = sky})
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash('y_position') then 
+			height = message.points 
+			if (t < 1) then -- t går mellan 0 och 1 för lerp
+				t = height/space_height
+			new_color = vmath.lerp(t, sky, space) -- vi går stegvist mellan sky och space färgen
+			msg.post('@render:', 'clear_color', {color = new_color})
+		end
+	end
+end
