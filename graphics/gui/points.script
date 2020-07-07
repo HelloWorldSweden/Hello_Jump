@@ -1,4 +1,5 @@
 function update(self, dt)
 	jumped = -go.get_world_position().y
 	msg.post('gui#points', 'y_position', {points = -go.get_position().y})
+	msg.post('world#background_changer', 'y_position', {points = -go.get_position().y})
 end
