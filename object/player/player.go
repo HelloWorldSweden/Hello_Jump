@@ -1,6 +1,6 @@
 components {
   id: "player"
-  component: "/object/player.script"
+  component: "/object/player/player.script"
   position {
     x: 0.0
     y: 0.0
@@ -44,6 +44,7 @@ embedded_components {
   "group: \"player\"\n"
   "mask: \"platform\"\n"
   "mask: \"bouncer\"\n"
+  "mask: \"coin\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
