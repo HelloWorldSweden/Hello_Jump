@@ -1,7 +1,7 @@
 name: "game"
 instances {
   id: "player"
-  prototype: "/object/player.go"
+  prototype: "/object/player/player.go"
   position {
     x: 250.0
     y: 209.0
@@ -21,7 +21,7 @@ instances {
 }
 instances {
   id: "platform"
-  prototype: "/object/platform.go"
+  prototype: "/object/platform/platform.go"
   position {
     x: 248.0
     y: 33.0
@@ -41,7 +41,7 @@ instances {
 }
 instances {
   id: "factory"
-  prototype: "/object/factory.go"
+  prototype: "/object/factory/factory.go"
   position {
     x: 0.0
     y: 0.0
@@ -56,6 +56,26 @@ instances {
   scale3 {
     x: 1.0
     y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "coin"
+  prototype: "/object/coin/coin.go"
+  position {
+    x: 248.0
+    y: 424.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.24848987
+    w: 0.9686345
+  }
+  scale3 {
+    x: 0.351
+    y: 0.395
     z: 1.0
   }
 }

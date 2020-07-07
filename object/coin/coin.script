@@ -1,0 +1,18 @@
+function update(self, dt)
+	if go.get_world_position().y < -500 then
+		go.delete()
+	end
+end
+
+
+function on_message(self, message_id, message)
+	if message_id == hash("contact_point_response") then 
+		if message.other_group == hash("player") then
+			print("collision")
+			msg.post('gui#points', 'add_points') 
+			go.delete()
+		end 
+	end 
+end
+
+
