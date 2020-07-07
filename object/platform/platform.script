@@ -1,0 +1,5 @@
+function update(self, dt)
+	if go.get_world_position().y < -500 then
+		go.delete()
+	end
+end
