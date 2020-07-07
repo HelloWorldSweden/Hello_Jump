@@ -1,6 +1,6 @@
 components {
   id: "player"
-  component: "/object/player.script"
+  component: "/object/player/player.script"
   position {
     x: 0.0
     y: 0.0
@@ -13,7 +13,6 @@ components {
     w: 1.0
   }
 }
-
 embedded_components {
   id: "sprite"
   type: "sprite"

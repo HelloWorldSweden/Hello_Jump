@@ -1,6 +1,6 @@
 components {
   id: "factory"
-  component: "/object/factory.script"
+  component: "/object/factory/factory.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,7 +16,7 @@ components {
 embedded_components {
   id: "platform"
   type: "factory"
-  data: "prototype: \"/object/platform.go\"\n"
+  data: "prototype: \"/object/platform/platform.go\"\n"
   "load_dynamically: false\n"
   ""
   position {

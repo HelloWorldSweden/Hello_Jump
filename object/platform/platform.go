@@ -1,6 +1,6 @@
 components {
   id: "platform"
-  component: "/object/platform.script"
+  component: "/object/platform/platform.script"
   position {
     x: 0.0
     y: 0.0
