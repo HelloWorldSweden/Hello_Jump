@@ -1,4 +1,5 @@
 local points = 0
+local coins = 0
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash('y_position') then
@@ -6,6 +7,11 @@ function on_message(self, message_id, message, sender)
 			points = math.floor(message.points)
 			points_node = gui.get_node('points')
 			gui.set_text(points_node, points)
-		end
+		end 
+	elseif message_id == hash("add_points") then
+		coins = coins + 1
+		coin_node = gui.get_node('coin')
+		gui.set_text(coin_node, coins)
 	end
 end
+

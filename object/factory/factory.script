@@ -1,6 +1,10 @@
 local latest_platform = ""
 local pos = vmath.vector3(0, 0, 0)
 
+function init(self)
+	timer.delay(6, true, create_coin)
+end
+
 function update(self, dt)
 	if latest_platform == '' or go.get_world_position(latest_platform).y < 1000 then
 		pos.y = go.get_world_position(latest_platform).y + math.random(130, 150)
@@ -20,3 +24,11 @@ function platform()
 	end
 end
 
+function create_coin()
+	local position = vmath.vector3(0, 0, 0)
+	position.x = math.random(35, 500 - 35)
+	position.y = go.get_world_position(latest_platform).y + math.random(130, 150)
+
+	factory.create("#coin_factory", position, nil, {}, vmath.vector3(0.351, 0.395, 1)
+)
+end
