@@ -59,10 +59,10 @@ function on_message(self, message_id, message, sender)
 				msg.post('#jump_sfx', 'play_sound')
 			end
 		end
-		elseif message.other_group == hash('bouncer') then
-			if y_speed < 0 then
-				y_speed = jump * 3
-				msg.post('#jump_sfx', 'play_sound')
+	elseif message.other_group == hash('bouncer') then
+		if y_speed < 0 then
+			y_speed = jump * 3
+			msg.post('#jump_sfx', 'play_sound')
 		end
 	end
 end
