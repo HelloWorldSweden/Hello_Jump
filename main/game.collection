@@ -59,26 +59,6 @@ instances {
     z: 1.0
   }
 }
-instances {
-  id: "coin"
-  prototype: "/object/coin/coin.go"
-  position {
-    x: 248.0
-    y: 424.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: -0.24848987
-    w: 0.9686345
-  }
-  scale3 {
-    x: 0.351
-    y: 0.395
-    z: 1.0
-  }
-}
 scale_along_z: 0
 embedded_instances {
   id: "world"
