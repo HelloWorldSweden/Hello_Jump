@@ -8,11 +8,12 @@ end
 function on_message(self, message_id, message)
 	if message_id == hash("contact_point_response") then 
 		if message.other_group == hash("player") then
-			print("collision")
-			msg.post('gui#points', 'add_points') 
 			go.delete()
 		end 
 	end 
 end
 
+
+-- print("collision")
+-- msg.post('gui#points', 'add_points') 
 
