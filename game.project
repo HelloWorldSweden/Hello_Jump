@@ -9,3 +9,6 @@ main_collection = /main/main.collectionc
 width = 500
 height = 800
 
+[html5]
+show_fullscreen_button = 0
+
